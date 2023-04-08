@@ -1,0 +1,62 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJuYW1lIjoicmlvNSIsImVtYWlsIjoicmlvNUBnbWFpbC5jb20iLCJpYXQiOjE2ODA3MjM5NTMsImV4cCI6MTY4MDcyMzk3M30.8diVrmCPatTxvWUoUa063WrdAVv_me5_Er0e1wAoPrs
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"rio5",
+    "email":"rio5@gmail.com",
+    "password":"12345",
+    "confirmPassword":"12345"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"rio5@gmail.com",
+    "password":"12345"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+
+
+
+
+###
+GET http://localhost:5000/siswa
+
+
+###
+GET http://localhost:5000/siswa/1
+
+###
+POST http://localhost:5000/siswa
+Content-Type: application/json
+
+{
+    "name":"Firza",
+    "email":"firza@gmail.com",
+    "gender":"Malee"
+}
+
+###
+PATCH  http://localhost:5000/siswa/1
+Content-Type: application/json
+
+{
+    "name":"Syida",
+    "email":"syida@gmail.com",
+    "gender":"Malee"
+}
+
+###
+DELETE   http://localhost:5000/siswa/2
